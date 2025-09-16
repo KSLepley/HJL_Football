@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Name - Football Recruiting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="jersey-number">#00</span>
+                <span class="player-name">PLAYER NAME</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#stats" class="nav-link">Stats</a></li>
+                <li><a href="#highlights" class="nav-link">Highlights</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="highlight">WIDE RECEIVER</span>
+                    <span class="highlight">SAFETY</span>
+                </h1>
+                <h2 class="player-name-large">PLAYER NAME</h2>
+                <p class="hero-subtitle">St. Genevieve High School • Class of 2025</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5'11"</span>
+                        <span class="stat-label">Height</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">185</span>
+                        <span class="stat-label">Weight</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.5</span>
+                        <span class="stat-label">40 Time</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#stats" class="btn btn-primary">View Stats</a>
+                    <a href="#highlights" class="btn btn-secondary">Watch Highlights</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="player-card">
+                    <div class="card-glow"></div>
+                    <div class="player-photo">
+                        <!-- Placeholder for player photo -->
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>#00</h3>
+                        <p>WR/SS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Season Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-football-ball"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">Receiving</h3>
+                        <div class="stat-details">
+                            <div class="stat-row">
+                                <span class="stat-label">Receptions:</span>
+                                <span class="stat-value" data-target="45">0</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Yards:</span>
+                                <span class="stat-value" data-target="720">0</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Touchdowns:</span>
+                                <span class="stat-value" data-target="8">0</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">YPC:</span>
+                                <span class="stat-value" data-target="16.0">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">Defense</h3>
+                        <div class="stat-details">
+                            <div class="stat-row">
+                                <span class="stat-label">Tackles:</span>
+                                <span class="stat-value" data-target="52">0</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Interceptions:</span>
+                                <span class="stat-value" data-target="3">0</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Pass Breakups:</span>
+                                <span class="stat-value" data-target="8">0</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">Forced Fumbles:</span>
+                                <span class="stat-value" data-target="2">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-title">Achievements</h3>
+                        <div class="stat-details">
+                            <div class="achievement">
+                                <i class="fas fa-medal"></i>
+                                <span>All-Conference WR</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-star"></i>
+                                <span>Team Captain</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-fire"></i>
+                                <span>1000+ All-Purpose Yards</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="highlights-section">
+        <div class="container">
+            <h2 class="section-title">Game Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-video">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Touchdown Catch</p>
+                        </div>
+                    </div>
+                    <div class="highlight-info">
+                        <h3>Game-Winning TD</h3>
+                        <p>45-yard reception in overtime vs. Rival High</p>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-video">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Interception</p>
+                        </div>
+                    </div>
+                    <div class="highlight-info">
+                        <h3>Clutch Interception</h3>
+                        <p>Game-sealing pick in the red zone</p>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-video">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Big Hit</p>
+                        </div>
+                    </div>
+                    <div class="highlight-info">
+                        <h3>Bone-Crushing Hit</h3>
+                        <p>Forced fumble on 3rd down</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Recruiting Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-school"></i>
+                        <div>
+                            <h4>St. Genevieve High School</h4>
+                            <p>Class of 2025</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <h4>Head Coach</h4>
+                            <p>Coach Name - (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>player@email.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="School/Organization" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Player Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
