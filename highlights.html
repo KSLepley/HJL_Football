@@ -7,6 +7,48 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Critical CSS */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background: #1a1a2e; color: #fff; }
+        .navbar { background: rgba(0, 0, 0, 0.95); padding: 20px; position: fixed; top: 0; width: 100%; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .jersey-number { font-family: 'Orbitron', monospace; font-size: 2rem; font-weight: 900; color: #00ff88; }
+        .player-name { font-family: 'Orbitron', monospace; font-size: 1.2rem; font-weight: 700; color: #fff; margin-left: 15px; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-link { color: #fff; text-decoration: none; font-weight: 500; }
+        .nav-link:hover, .nav-link.active { color: #00ff88; }
+        .page-header { padding: 120px 0 80px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%); text-align: center; color: #fff; }
+        .page-title { font-family: 'Orbitron', monospace; font-size: 3rem; font-weight: 900; margin-bottom: 20px; color: #00ff88; }
+        .page-subtitle { font-size: 1.2rem; color: #ccc; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .highlights-section { padding: 100px 0; background: #1a1a2e; }
+        .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .highlight-card { background: #16213e; border-radius: 20px; overflow: hidden; transition: all 0.3s ease; }
+        .highlight-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2); }
+        .highlight-video { position: relative; height: 200px; background: linear-gradient(45deg, #00ff88, #00ccff); display: flex; align-items: center; justify-content: center; }
+        .video-placeholder { text-align: center; color: #000; }
+        .video-placeholder i { font-size: 4rem; margin-bottom: 10px; display: block; }
+        .video-placeholder p { font-weight: 600; font-size: 1.1rem; }
+        .highlight-info { padding: 20px; color: #fff; }
+        .highlight-info h3 { font-family: 'Orbitron', monospace; font-size: 1.3rem; margin-bottom: 10px; color: #00ff88; }
+        .highlight-info p { color: #ccc; line-height: 1.5; }
+        .highlight-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid #333; }
+        .game-info { font-size: 0.9rem; color: #ccc; }
+        .play-type { background: #00ff88; color: #000; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+        .recap-section { padding: 100px 0; background: #f8f9fa; }
+        .recap-content { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; align-items: start; }
+        .recap-text h3 { font-family: 'Orbitron', monospace; font-size: 2rem; margin-bottom: 20px; color: #333; }
+        .recap-text p { font-size: 1.1rem; color: #666; margin-bottom: 20px; line-height: 1.6; }
+        .recap-list { list-style: none; padding: 0; }
+        .recap-list li { padding: 10px 0; color: #666; position: relative; padding-left: 25px; }
+        .recap-list li::before { content: '✓'; position: absolute; left: 0; color: #00ff88; font-weight: bold; }
+        .recap-stats { display: flex; flex-direction: column; gap: 30px; }
+        .recap-stat { text-align: center; padding: 20px; background: #fff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+        .recap-number { display: block; font-family: 'Orbitron', monospace; font-size: 2.5rem; font-weight: 900; color: #00ff88; margin-bottom: 5px; }
+        .recap-label { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+        .footer { background: #1a1a2e; color: #fff; text-align: center; padding: 30px 0; }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
