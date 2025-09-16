@@ -34,8 +34,8 @@ git push origin main
 ### Step 3: File Naming
 Use these exact names for the website to work:
 
-**Images:**
-- `player-photo.jpg` - Main headshot
+**Images (JPEG format):**
+- `player-photo.jpg` (or `.jpeg`) - Main headshot
 - `touchdown-catch-poster.jpg` - Video thumbnail
 - `interception-poster.jpg` - Video thumbnail
 - `big-hit-poster.jpg` - Video thumbnail

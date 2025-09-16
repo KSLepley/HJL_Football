@@ -24,9 +24,9 @@ assets/
 ## 📸 Image Requirements
 
 ### Player Photo (Main)
-- **File**: `player-photo.jpg`
+- **File**: `player-photo.jpg` (or `player-photo.jpeg`)
 - **Size**: 400x600px (2:3 ratio)
-- **Format**: JPG or PNG
+- **Format**: JPEG (recommended) or PNG
 - **Quality**: High resolution, clear face
 - **Background**: Solid color or blurred background preferred
 
