@@ -45,3 +45,9 @@ coverage/
 
 # Vercel
 .vercel
+
+# Media files (uncomment if you want to ignore large files)
+# assets/videos/
+# *.mp4
+# *.mov
+# *.avi
