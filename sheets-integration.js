@@ -97,8 +97,8 @@ class StatsUpdater {
 
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    // You'll need to replace this with your actual Google Sheet ID
-    const SHEET_ID = 'YOUR_GOOGLE_SHEET_ID_HERE';
+    // Harold's Google Sheet ID
+    const SHEET_ID = '1axNOpctbgcWD4GV-PRHIwDIRrBagyM8yiUVVJsMC7zc';
     
     if (SHEET_ID !== 'YOUR_GOOGLE_SHEET_ID_HERE') {
         const statsUpdater = new StatsUpdater();
