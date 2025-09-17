@@ -222,21 +222,26 @@ animateOnScroll.forEach(element => {
 
 // Add particle animation enhancement
 function createParticle() {
+    const particlesContainer = document.querySelector('.particles');
+    if (!particlesContainer) return; // Exit if particles container doesn't exist
+    
     const particle = document.createElement('div');
     particle.style.position = 'absolute';
     particle.style.width = '2px';
     particle.style.height = '2px';
-    particle.style.background = '#00ff88';
+    particle.style.background = '#C0C0C0';
     particle.style.borderRadius = '50%';
     particle.style.left = Math.random() * 100 + '%';
     particle.style.top = '100%';
     particle.style.animation = 'float 15s linear infinite';
     particle.style.opacity = '0.6';
     
-    document.querySelector('.particles').appendChild(particle);
+    particlesContainer.appendChild(particle);
     
     setTimeout(() => {
-        particle.remove();
+        if (particle.parentNode) {
+            particle.remove();
+        }
     }, 15000);
 }
 

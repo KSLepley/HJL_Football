@@ -21,16 +21,23 @@ class StatsUpdater {
             // Use CSV export URL (no API key needed)
             const url = `https://docs.google.com/spreadsheets/d/${this.sheetId}/export?format=csv&gid=0`;
             const response = await fetch(url);
+            
+            if (!response.ok) {
+                console.log('Google Sheets not accessible, using fallback stats');
+                this.loadFallbackStats();
+                return;
+            }
+            
             const csvText = await response.text();
             
-            if (csvText) {
+            if (csvText && csvText.length > 0) {
                 this.parseCSV(csvText);
             } else {
-                console.log('Using fallback stats - Google Sheets not available');
+                console.log('Empty response from Google Sheets, using fallback stats');
                 this.loadFallbackStats();
             }
         } catch (error) {
-            console.log('Using fallback stats - Google Sheets not available');
+            console.log('Error accessing Google Sheets, using fallback stats:', error);
             this.loadFallbackStats();
         }
     }
