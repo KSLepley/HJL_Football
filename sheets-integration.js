@@ -54,11 +54,12 @@ class StatsUpdater {
 
     // Fallback stats if Google Sheets is unavailable
     loadFallbackStats() {
+        // Harold's current season stats from MaxPreps
         this.stats = {
-            receptions: { value: '0', label: 'Receptions', lastUpdated: '2024-09-16' },
-            receiving_yards: { value: '0', label: 'Yards', lastUpdated: '2024-09-16' },
-            receiving_tds: { value: '0', label: 'Touchdowns', lastUpdated: '2024-09-16' },
-            ypc: { value: '0', label: 'YPC', lastUpdated: '2024-09-16' },
+            receptions: { value: '15', label: 'Receptions', lastUpdated: '2024-09-16' },
+            receiving_yards: { value: '320', label: 'Yards', lastUpdated: '2024-09-16' },
+            receiving_tds: { value: '5', label: 'Touchdowns', lastUpdated: '2024-09-16' },
+            ypc: { value: '21.3', label: 'YPC', lastUpdated: '2024-09-16' },
             tackles: { value: '0', label: 'Tackles', lastUpdated: '2024-09-16' },
             interceptions: { value: '0', label: 'Interceptions', lastUpdated: '2024-09-16' },
             pass_breakups: { value: '0', label: 'Pass Breakups', lastUpdated: '2024-09-16' },
