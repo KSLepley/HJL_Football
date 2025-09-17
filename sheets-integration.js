@@ -15,27 +15,40 @@ class StatsUpdater {
         this.updateDisplay();
     }
 
-    // Load stats from Google Sheets
+    // Load stats from Google Sheets using CSV export
     async loadStats() {
         try {
-            const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.sheetId}/values/Sheet1!A2:D10?key=${this.apiKey}`;
+            // Use CSV export URL (no API key needed)
+            const url = `https://docs.google.com/spreadsheets/d/${this.sheetId}/export?format=csv&gid=0`;
             const response = await fetch(url);
-            const data = await response.json();
+            const csvText = await response.text();
             
-            if (data.values) {
-                data.values.forEach(row => {
-                    if (row.length >= 2) {
-                        this.stats[row[0]] = {
-                            value: row[1],
-                            label: row[2] || row[0],
-                            lastUpdated: row[3] || 'Unknown'
-                        };
-                    }
-                });
+            if (csvText) {
+                this.parseCSV(csvText);
+            } else {
+                console.log('Using fallback stats - Google Sheets not available');
+                this.loadFallbackStats();
             }
         } catch (error) {
             console.log('Using fallback stats - Google Sheets not available');
             this.loadFallbackStats();
+        }
+    }
+
+    // Parse CSV data
+    parseCSV(csvText) {
+        const lines = csvText.split('\n');
+        const headers = lines[0].split(',');
+        
+        for (let i = 1; i < lines.length; i++) {
+            const values = lines[i].split(',');
+            if (values.length >= 2 && values[0].trim()) {
+                this.stats[values[0].trim()] = {
+                    value: values[1].trim(),
+                    label: values[2] ? values[2].trim() : values[0].trim(),
+                    lastUpdated: values[3] ? values[3].trim() : 'Unknown'
+                };
+            }
         }
     }
 
@@ -55,6 +68,8 @@ class StatsUpdater {
 
     // Update the display with current stats
     updateDisplay() {
+        console.log('Updating display with stats:', this.stats);
+        
         // Update receiving stats
         this.updateStat('receptions', this.stats.receptions?.value || '0');
         this.updateStat('receiving_yards', this.stats.receiving_yards?.value || '0');
