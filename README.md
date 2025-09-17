@@ -1,150 +1,167 @@
-# 🏈 Football Recruiting Website
+# 🏈 Harold "Jayden" Lepley - Football Recruiting Website
 
-A modern, responsive website designed to showcase high school football players to college recruiters. Features animated stats, highlight reels, and professional contact information.
+A modern, professional recruiting website showcasing Harold "Jayden" Lepley's football career at St. Gen High School in Panorama City, CA.
 
 ## ✨ Features
 
-- **Modern Design**: Futuristic neon theme with smooth animations
-- **Responsive**: Works perfectly on desktop, tablet, and mobile
-- **Interactive Stats**: Animated counters and visualizations
-- **Highlight Reels**: Video showcase sections
-- **Contact Forms**: Easy communication for recruiters
-- **Social Integration**: Links to social media profiles
-- **Fast Loading**: Optimized for performance
+### 🎯 **Professional Design**
+- **Modern futuristic theme** with St. Gen school colors (silver & navy blue)
+- **Responsive design** that works perfectly on all devices
+- **Smooth animations** and interactive effects
+- **Mobile-optimized** for recruiters on the go
 
-## 🚀 Quick Deploy to Vercel
+### 📊 **Real-Time Stats**
+- **Live stat updates** from Google Sheets integration
+- **Fallback system** with current season statistics
+- **Animated counters** for visual impact
+- **Comprehensive metrics** (receiving, defense, physical attributes)
 
-### Option 1: Deploy with Vercel CLI (Recommended)
+### 🎬 **Video Highlights**
+- **YouTube integration** for easy video management
+- **Professional video players** embedded directly
+- **Secure hosting** - viewers can't alter content
+- **Mobile-friendly** video playback
 
-1. **Install Vercel CLI** (if you don't have it):
-   ```bash
-   npm i -g vercel
-   ```
+### 📱 **Multi-Page Structure**
+- **Home**: Hero section with overview and social links
+- **Stats**: Detailed statistics and physical attributes
+- **Highlights**: Video showcase and season recap
+- **Contact**: Professional contact form and information
 
-2. **Deploy from your project folder**:
-   ```bash
-   cd /Users/kaylielepley/HJL_PWB
-   vercel
-   ```
+## 🏫 Player Information
 
-3. **Follow the prompts**:
-   - Link to existing project? → No
-   - Project name → `football-recruiting-site` (or your choice)
-   - Directory → `.` (current directory)
-   - Override settings? → No
+- **Name**: Harold "Jayden" Lepley
+- **School**: St. Gen High School, Panorama City, CA
+- **Class**: 2027
+- **Position**: Wide Receiver / Safety
+- **Jersey**: #4
+- **Height**: 5'11"
+- **Weight**: 185 lbs
+- **40 Time**: 4.8s
+- **Vertical Jump**: 30"
 
-4. **Your site will be live** at a URL like `https://football-recruiting-site.vercel.app`
+## 📈 Current Season Stats
 
-### Option 2: Deploy via Vercel Dashboard
+### **Receiving**
+- **Receptions**: 15
+- **Yards**: 320
+- **Touchdowns**: 5
+- **YPC**: 21.3
 
-1. **Push to GitHub** (if not already):
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/football-recruiting-site.git
-   git push -u origin main
-   ```
+### **Physical Performance**
+- **Bench Press**: 245 lbs
+- **Squat**: 405 lbs
+- **40 Yard Dash**: 4.8s
+- **Vertical Jump**: 30"
 
-2. **Connect to Vercel**:
-   - Go to [vercel.com](https://vercel.com)
-   - Sign in with GitHub
-   - Click "New Project"
-   - Import your repository
-   - Deploy!
+## 🎥 Video Highlights
 
-## 🎯 Customization
+1. **40 Yard TD Run vs La Salle** - Game-winning touchdown
+2. **50 Yard Toss & Rush TD** - Explosive running play
+3. **20 Yard Reception & Run TD** - Catch and run for score
 
-### Essential Updates Needed:
+## 📞 Contact Information
 
-1. **Player Information**:
-   - Replace "PLAYER NAME" with actual name
-   - Update jersey number (#00)
-   - Add real photo (replace user icon)
+- **Email**: haroldlepley368@gmail.com
+- **Head Coach**: Billy Parra - (818) 894-6417
+- **Instagram**: [@jayden_lepley](https://instagram.com/jayden_lepley)
+- **X/Twitter**: [@lepley_harold](https://x.com/lepley_harold)
 
-2. **Stats**:
-   - Update receiving stats (receptions, yards, TDs, YPC)
-   - Update defensive stats (tackles, interceptions, PBUs)
-   - Add real achievements and awards
+## 🚀 Technical Features
 
-3. **Contact Info**:
-   - Coach name and phone number
-   - School email
-   - Social media links
+### **Performance**
+- **Fast loading** with optimized assets
+- **CDN delivery** via Vercel
+- **Mobile-first** responsive design
+- **SEO optimized** for search engines
 
-4. **Highlights**:
-   - Upload actual highlight videos
-   - Replace placeholder descriptions
+### **Security**
+- **Secure video hosting** via YouTube
+- **Protected content** - no direct file access
+- **Professional presentation** for recruiters
 
-### File Structure:
-```
-├── index.html          # Main HTML file
-├── styles.css          # All CSS styles
-├── script.js           # JavaScript functionality
-├── package.json        # Project configuration
-├── vercel.json         # Vercel deployment config
-└── README.md           # This file
-```
+### **Updates**
+- **Easy stat updates** via Google Sheets
+- **Automatic deployment** from GitHub
+- **Version control** for all changes
 
-## 🌐 Alternative Hosting Options
+## 🛠️ Technology Stack
 
-### Netlify (Free)
-1. Drag and drop your project folder to [netlify.com/drop](https://netlify.com/drop)
-2. Get instant live URL
-
-### GitHub Pages (Free)
-1. Push to GitHub repository
-2. Go to Settings → Pages
-3. Select source branch
-4. Your site will be at `https://username.github.io/repository-name`
-
-### Firebase Hosting (Free tier)
-```bash
-npm install -g firebase-tools
-firebase login
-firebase init hosting
-firebase deploy
-```
+- **HTML5** - Semantic structure
+- **CSS3** - Modern styling with animations
+- **JavaScript** - Interactive features
+- **Google Sheets API** - Real-time stats
+- **YouTube API** - Video embedding
+- **Vercel** - Hosting and deployment
+- **GitHub** - Version control
 
 ## 📱 Mobile Optimization
 
-The site is fully responsive and includes:
-- Mobile-first design
-- Touch-friendly navigation
-- Optimized images and animations
-- Fast loading on all devices
+- **Touch-friendly** navigation
+- **Responsive videos** that scale properly
+- **Fast loading** on mobile networks
+- **Easy contact** form completion
 
-## 🔧 Development
+## 🎨 Design Elements
 
-To run locally:
-```bash
-npm install
-npm start
-```
-
-Visit `http://localhost:3000` to see your site.
-
-## 📈 SEO Optimization
-
-The site includes:
-- Semantic HTML structure
-- Meta tags for social sharing
-- Fast loading times
-- Mobile-friendly design
-- Clean, accessible code
-
-## 🎨 Design Features
-
-- **Color Scheme**: Neon green (#00ff88) and blue (#00ccff)
+- **Color Scheme**: Silver (#C0C0C0) and Navy Blue (#4169E1)
 - **Typography**: Orbitron (futuristic) + Roboto (readable)
 - **Animations**: Smooth transitions and hover effects
 - **Layout**: Modern grid system with flexbox
 
+## 🔄 How to Update
+
+### **Stats Updates**
+1. **Google Sheets** (preferred): Update the connected spreadsheet
+2. **Manual**: Contact developer to update fallback stats
+3. **Automatic**: Changes appear on website within minutes
+
+### **Video Updates**
+1. **Upload to YouTube** as unlisted videos
+2. **Send video IDs** to developer
+3. **Videos appear** on highlights page automatically
+
+### **Content Updates**
+1. **Contact developer** for any changes
+2. **GitHub integration** for version control
+3. **Automatic deployment** via Vercel
+
+## 🌐 Live Website
+
+**URL**: [https://football-recruiting-site.vercel.app](https://football-recruiting-site.vercel.app)
+
+## 📋 Project Structure
+
+```
+├── index.html              # Home page
+├── stats.html              # Statistics page
+├── highlights.html          # Video highlights
+├── contact.html             # Contact information
+├── styles.css              # Main stylesheet
+├── script.js               # Interactive features
+├── sheets-integration.js   # Google Sheets integration
+├── assets/
+│   ├── images/
+│   │   └── mainPFP.jpeg    # Player photo
+│   └── videos/             # Video assets
+├── package.json            # Project configuration
+├── vercel.json             # Deployment settings
+└── README.md               # This file
+```
+
+## 🎯 For Recruiters
+
+This website provides a comprehensive view of Harold's:
+- **Athletic performance** and statistics
+- **Game highlights** and video footage
+- **Physical attributes** and measurements
+- **Contact information** for direct communication
+- **Professional presentation** of his abilities
+
 ## 📞 Support
 
-For questions or customization help, feel free to reach out!
+For technical issues or updates, contact the developer or Harold's family directly.
 
 ---
 
-**Ready to showcase your talent!** 🏈✨
+**Built with ❤️ for showcasing Harold's football talent and helping him achieve his recruiting goals!** 🏈✨
