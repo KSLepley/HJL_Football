@@ -41,6 +41,14 @@
         .physical-icon { font-size: 2.5rem; color: #4169E1; margin-bottom: 15px; }
         .physical-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: #333; font-weight: 500; }
         .physical-value { font-family: 'Orbitron', monospace; font-size: 1.5rem; font-weight: 700; color: #C0C0C0; }
+        .strength-section { padding: 100px 0; background: #f8f9fa; }
+        .strength-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .strength-card { background: #fff; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
+        .strength-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); }
+        .strength-icon { font-size: 3rem; color: #4169E1; margin-bottom: 15px; }
+        .strength-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: #333; font-weight: 600; }
+        .strength-value { font-family: 'Orbitron', monospace; font-size: 2rem; font-weight: 900; color: #C0C0C0; margin-bottom: 5px; }
+        .strength-label { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
         .footer { background: #1a1a2e; color: #fff; text-align: center; padding: 30px 0; }
     </style>
 </head>
@@ -158,6 +166,47 @@
         </div>
     </section>
 
+    <!-- Strength & Performance -->
+    <section class="strength-section">
+        <div class="container">
+            <h2 class="section-title">Strength & Performance</h2>
+            <div class="strength-grid">
+                <div class="strength-card">
+                    <div class="strength-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Bench Press</h3>
+                    <p class="strength-value">245 lbs</p>
+                    <p class="strength-label">Upper Body Strength</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3>Squat</h3>
+                    <p class="strength-value">405 lbs</p>
+                    <p class="strength-label">Lower Body Power</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>40 Yard Dash</h3>
+                    <p class="strength-value">4.8s</p>
+                    <p class="strength-label">Speed & Agility</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <h3>Vertical Jump</h3>
+                    <p class="strength-value">30"</p>
+                    <p class="strength-label">Explosive Power</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Physical Attributes -->
     <section class="physical-section">
         <div class="container">
@@ -182,14 +231,28 @@
                         <i class="fas fa-stopwatch"></i>
                     </div>
                     <h3>40 Yard Dash</h3>
-                    <p class="physical-value">4.5s</p>
+                    <p class="physical-value">4.8s</p>
                 </div>
                 <div class="physical-card">
                     <div class="physical-icon">
                         <i class="fas fa-running"></i>
                     </div>
                     <h3>Vertical Jump</h3>
-                    <p class="physical-value">32"</p>
+                    <p class="physical-value">30"</p>
+                </div>
+                <div class="physical-card">
+                    <div class="physical-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Bench Press</h3>
+                    <p class="physical-value">245 lbs</p>
+                </div>
+                <div class="physical-card">
+                    <div class="physical-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3>Squat</h3>
+                    <p class="physical-value">405 lbs</p>
                 </div>
             </div>
         </div>
