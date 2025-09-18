@@ -61,16 +61,16 @@ class StatsUpdater {
 
     // Fallback stats if Google Sheets is unavailable
     loadFallbackStats() {
-        // Harold's current season stats from MaxPreps
+        // Harold's 2024-25 season stats (3 games: AVHS, South Hills, La Salle)
         this.stats = {
-            receptions: { value: '15', label: 'Receptions', lastUpdated: '2024-09-16' },
-            receiving_yards: { value: '320', label: 'Yards', lastUpdated: '2024-09-16' },
-            receiving_tds: { value: '5', label: 'Touchdowns', lastUpdated: '2024-09-16' },
-            ypc: { value: '21.3', label: 'YPC', lastUpdated: '2024-09-16' },
-            tackles: { value: '0', label: 'Tackles', lastUpdated: '2024-09-16' },
-            interceptions: { value: '0', label: 'Interceptions', lastUpdated: '2024-09-16' },
-            pass_breakups: { value: '0', label: 'Pass Breakups', lastUpdated: '2024-09-16' },
-            forced_fumbles: { value: '0', label: 'Forced Fumbles', lastUpdated: '2024-09-16' }
+            receptions: { value: '15', label: 'Receptions', lastUpdated: '2024-09-12' },
+            receiving_yards: { value: '320', label: 'Yards', lastUpdated: '2024-09-12' },
+            receiving_tds: { value: '5', label: 'Touchdowns', lastUpdated: '2024-09-12' },
+            ypc: { value: '21.3', label: 'YPC', lastUpdated: '2024-09-12' },
+            tackles: { value: '0', label: 'Tackles', lastUpdated: '2024-09-12' },
+            interceptions: { value: '0', label: 'Interceptions', lastUpdated: '2024-09-12' },
+            pass_breakups: { value: '0', label: 'Pass Breakups', lastUpdated: '2024-09-12' },
+            forced_fumbles: { value: '0', label: 'Forced Fumbles', lastUpdated: '2024-09-12' }
         };
     }
 
