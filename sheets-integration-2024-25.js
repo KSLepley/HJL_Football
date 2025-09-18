@@ -12,29 +12,29 @@ class StatsManager2024 {
     }
 
     loadFallbackStats() {
-        // Harold's 2023-24 season stats (1 game: West Ranch)
+        // Harold's 2023-24 season stats (4 games: West Ranch, Castaic, Canyon, GVHS)
         this.stats = {
-            receptions: { value: '0', label: 'Receptions', lastUpdated: '2023-09-21' },
-            receiving_yards: { value: '0', label: 'Receiving Yards', lastUpdated: '2023-09-21' },
-            receiving_tds: { value: '0', label: 'Receiving TDs', lastUpdated: '2023-09-21' },
-            ypc: { value: '0', label: 'YPC', lastUpdated: '2023-09-21' },
+            receptions: { value: '17', label: 'Receptions', lastUpdated: '2023-10-26' },
+            receiving_yards: { value: '287', label: 'Receiving Yards', lastUpdated: '2023-10-26' },
+            receiving_tds: { value: '2', label: 'Receiving TDs', lastUpdated: '2023-10-26' },
+            ypc: { value: '16.9', label: 'YPC', lastUpdated: '2023-10-26' },
             rushing_attempts: { value: '6', label: 'Rushing Attempts', lastUpdated: '2023-09-21' },
             rushing_yards: { value: '87', label: 'Rushing Yards', lastUpdated: '2023-09-21' },
             rushing_avg: { value: '14.5', label: 'Rushing Avg', lastUpdated: '2023-09-21' },
             rushing_long: { value: '37', label: 'Long Rush', lastUpdated: '2023-09-21' },
-            total_points: { value: '0', label: 'Total Points', lastUpdated: '2023-09-21' },
-            total_tds: { value: '0', label: 'Total TDs', lastUpdated: '2023-09-21' },
-            kick_returns: { value: '0', label: 'Kick Return Yards', lastUpdated: '2023-09-21' },
-            kick_return_avg: { value: '0', label: 'Kick Return Avg', lastUpdated: '2023-09-21' },
-            kick_returns_count: { value: '0', label: 'Kick Returns', lastUpdated: '2023-09-21' },
-            interception_returns: { value: '0', label: 'Interception Return Yards', lastUpdated: '2023-09-21' },
-            all_purpose: { value: '87', label: 'All-Purpose Yards', lastUpdated: '2023-09-21' },
-            tackles: { value: '0', label: 'Total Tackles', lastUpdated: '2023-09-21' },
-            solo_tackles: { value: '0', label: 'Solo Tackles', lastUpdated: '2023-09-21' },
-            assisted_tackles: { value: '0', label: 'Assisted Tackles', lastUpdated: '2023-09-21' },
-            interceptions: { value: '0', label: 'Interceptions', lastUpdated: '2023-09-21' },
-            pass_breakups: { value: '0', label: 'Pass Breakups', lastUpdated: '2023-09-21' },
-            forced_fumbles: { value: '0', label: 'Forced Fumbles', lastUpdated: '2023-09-21' }
+            total_points: { value: '12', label: 'Total Points', lastUpdated: '2023-10-26' },
+            total_tds: { value: '2', label: 'Total TDs', lastUpdated: '2023-10-26' },
+            kick_returns: { value: '0', label: 'Kick Return Yards', lastUpdated: '2023-10-26' },
+            kick_return_avg: { value: '0', label: 'Kick Return Avg', lastUpdated: '2023-10-26' },
+            kick_returns_count: { value: '0', label: 'Kick Returns', lastUpdated: '2023-10-26' },
+            interception_returns: { value: '0', label: 'Interception Return Yards', lastUpdated: '2023-10-26' },
+            all_purpose: { value: '374', label: 'All-Purpose Yards', lastUpdated: '2023-10-26' },
+            tackles: { value: '0', label: 'Total Tackles', lastUpdated: '2023-10-26' },
+            solo_tackles: { value: '0', label: 'Solo Tackles', lastUpdated: '2023-10-26' },
+            assisted_tackles: { value: '0', label: 'Assisted Tackles', lastUpdated: '2023-10-26' },
+            interceptions: { value: '0', label: 'Interceptions', lastUpdated: '2023-10-26' },
+            pass_breakups: { value: '0', label: 'Pass Breakups', lastUpdated: '2023-10-26' },
+            forced_fumbles: { value: '0', label: 'Forced Fumbles', lastUpdated: '2023-10-26' }
         };
     }
 
