@@ -8,83 +8,212 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Critical CSS */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; background: #f8f9fa; color: #333; }
-        .navbar { background: rgba(0, 0, 0, 0.95); padding: 20px; position: fixed; top: 0; width: 100%; z-index: 1000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        .jersey-number { font-family: 'Orbitron', monospace; font-size: 2rem; font-weight: 900; color: #C0C0C0; }
-        .player-name { font-family: 'Orbitron', monospace; font-size: 1.2rem; font-weight: 700; color: #fff; margin-left: 15px; }
-        .nav-menu { display: flex; list-style: none; gap: 30px; }
-        .nav-link { color: #fff; text-decoration: none; font-weight: 500; }
-        .nav-link:hover, .nav-link.active { color: #00ff88; }
-        .page-header { padding: 140px 0 80px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%); text-align: center; color: #fff; }
-        .page-title { font-family: 'Orbitron', monospace; font-size: 3rem; font-weight: 900; margin-bottom: 20px; color: #C0C0C0; }
-        .page-subtitle { font-size: 1.2rem; color: #ccc; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .stats-section { padding: 100px 0; background: #f8f9fa; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .stat-card { background: #fff; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
-        .stat-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
-        .stat-icon { font-size: 3rem; color: #4169E1; margin-bottom: 20px; text-align: center; }
-        .stat-title { font-family: 'Orbitron', monospace; font-size: 1.5rem; font-weight: 700; color: #333; margin-bottom: 20px; text-align: center; }
-        .stat-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
-        .stat-label { font-weight: 500; color: #666; }
-        .stat-value { font-family: 'Orbitron', monospace; font-size: 1.2rem; font-weight: 700; color: #C0C0C0; }
-        .achievement { display: flex; align-items: center; gap: 15px; padding: 10px 0; border-bottom: 1px solid #eee; }
-        .achievement i { color: #4169E1; font-size: 1.2rem; }
-        .achievement span { font-weight: 500; color: #333; }
-        .physical-section { padding: 100px 0; background: #f8f9fa; }
-        .physical-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
-        .physical-card { background: #fff; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
-        .physical-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); }
-        .physical-icon { font-size: 2.5rem; color: #4169E1; margin-bottom: 15px; }
-        .physical-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: #333; font-weight: 500; }
-        .physical-value { font-family: 'Orbitron', monospace; font-size: 1.5rem; font-weight: 700; color: #C0C0C0; }
-        .strength-section { padding: 100px 0; background: #f8f9fa; }
-        .strength-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .strength-card { background: #fff; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
-        .strength-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); }
-        .strength-icon { font-size: 3rem; color: #4169E1; margin-bottom: 15px; }
-        .strength-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: #333; font-weight: 600; }
-        .strength-value { font-family: 'Orbitron', monospace; font-size: 2rem; font-weight: 900; color: #C0C0C0; margin-bottom: 5px; }
-        .strength-label { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
-        .footer { background: #1a1a2e; color: #fff; text-align: center; padding: 30px 0; }
+        /* Critical CSS for immediate loading */
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #0a0a0a; 
+            color: #fff; 
+            overflow-x: hidden; 
+        }
+        .page-header { 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); 
+            padding: 120px 0 80px; 
+            text-align: center; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        .page-header::before { 
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; 
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23C0C0C0" stroke-width="0.5" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>'); 
+            opacity: 0.1; 
+        }
+        .page-header h1 { 
+            font-family: 'Orbitron', monospace; 
+            font-size: 4rem; 
+            font-weight: 900; 
+            color: #C0C0C0; 
+            margin-bottom: 20px; 
+            text-shadow: 0 0 30px #C0C0C0; 
+            position: relative; 
+            z-index: 2; 
+        }
+        .page-header p { 
+            font-size: 1.5rem; 
+            color: #ccc; 
+            margin-bottom: 40px; 
+            position: relative; 
+            z-index: 2; 
+        }
+        .season-nav { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            margin-bottom: 40px; 
+            position: relative; 
+            z-index: 2; 
+        }
+        .season-btn { 
+            padding: 12px 24px; 
+            background: rgba(65, 105, 225, 0.2); 
+            border: 2px solid #4169E1; 
+            color: #C0C0C0; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-weight: 700; 
+            transition: all 0.3s ease; 
+        }
+        .season-btn:hover { 
+            background: #4169E1; 
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 20px rgba(65, 105, 225, 0.3); 
+        }
+        .season-btn.active { 
+            background: #4169E1; 
+            box-shadow: 0 0 20px rgba(65, 105, 225, 0.5); 
+        }
+        .stats-section { 
+            padding: 80px 0; 
+            background: #0a0a0a; 
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 40px; 
+            margin-bottom: 60px; 
+        }
+        .stat-card { 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); 
+            padding: 40px; 
+            border-radius: 20px; 
+            border: 1px solid #4169E1; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+            transition: all 0.3s ease; 
+        }
+        .stat-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 20px 40px rgba(65, 105, 225, 0.2); 
+        }
+        .stat-card h3 { 
+            font-family: 'Orbitron', monospace; 
+            font-size: 1.8rem; 
+            color: #C0C0C0; 
+            margin-bottom: 30px; 
+            text-align: center; 
+            text-shadow: 0 0 10px #C0C0C0; 
+        }
+        .stat-row { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 15px 0; 
+            border-bottom: 1px solid rgba(192, 192, 192, 0.1); 
+        }
+        .stat-row:last-child { 
+            border-bottom: none; 
+        }
+        .stat-label { 
+            font-size: 1.1rem; 
+            color: #ccc; 
+            font-weight: 500; 
+        }
+        .stat-value { 
+            font-family: 'Orbitron', monospace; 
+            font-size: 1.5rem; 
+            font-weight: 700; 
+            color: #4169E1; 
+            text-shadow: 0 0 10px #4169E1; 
+        }
+        .nav { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            background: rgba(10, 10, 10, 0.95); 
+            backdrop-filter: blur(10px); 
+            z-index: 1000; 
+            padding: 15px 0; 
+            border-bottom: 1px solid rgba(65, 105, 225, 0.3); 
+        }
+        .nav-container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .nav-logo { 
+            font-family: 'Orbitron', monospace; 
+            font-size: 1.8rem; 
+            font-weight: 900; 
+            color: #C0C0C0; 
+            text-decoration: none; 
+            text-shadow: 0 0 10px #C0C0C0; 
+        }
+        .nav-links { 
+            display: flex; 
+            gap: 30px; 
+        }
+        .nav-links a { 
+            color: #ccc; 
+            text-decoration: none; 
+            font-weight: 500; 
+            transition: all 0.3s ease; 
+            position: relative; 
+        }
+        .nav-links a:hover { 
+            color: #4169E1; 
+            text-shadow: 0 0 10px #4169E1; 
+        }
+        .nav-links a::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: -5px; 
+            left: 0; 
+            width: 0; 
+            height: 2px; 
+            background: #4169E1; 
+            transition: width 0.3s ease; 
+        }
+        .nav-links a:hover::after { 
+            width: 100%; 
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="nav">
         <div class="nav-container">
-            <div class="nav-logo">
-                <span class="jersey-number">#4</span>
-                <span class="player-name">HAROLD "JAYDEN" LEPLEY</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="stats.html" class="nav-link active">2025-26 Stats</a></li>
-                <li><a href="stats-2024-25.html" class="nav-link">2024-25 Stats</a></li>
-                <li><a href="highlights.html" class="nav-link">Highlights</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <a href="index.html" class="nav-logo">#4 JAYDEN LEPLEY</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="stats.html">Stats</a>
+                <a href="highlights.html">Highlights</a>
+                <a href="contact.html">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">2025-26 Season Statistics</h1>
-            <p class="page-subtitle">Comprehensive performance metrics and achievements</p>
-            
-            <div class="season-nav" style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
-                <a href="stats-2024-25.html" class="season-btn" style="padding: 12px 24px; background: rgba(65, 105, 225, 0.2); border: 2px solid #4169E1; color: #C0C0C0; text-decoration: none; border-radius: 25px; font-weight: 700; transition: all 0.3s ease;">2024-25 Season</a>
-                <a href="stats.html" class="season-btn active" style="padding: 12px 24px; background: #4169E1; border: 2px solid #4169E1; color: #C0C0C0; text-decoration: none; border-radius: 25px; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 0 20px rgba(65, 105, 225, 0.5);">2025-26 Season</a>
-            </div>
+        <h1>2025-26 Season Stats</h1>
+        <p>Harold 'Jayden' Lepley • St. Gen High School</p>
+        
+        <div class="season-nav">
+            <a href="stats-2024-25.html" class="season-btn">2024-25 Season</a>
+            <a href="stats.html" class="season-btn active">2025-26 Season</a>
         </div>
     </section>
 
@@ -92,220 +221,87 @@
     <section class="stats-section">
         <div class="container">
             <div class="stats-grid">
+                <!-- Receiving Stats -->
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-football-ball"></i>
+                    <h3>Receiving</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Receptions:</span>
+                        <span class="stat-value" data-stat="receptions" data-target="0">0</span>
                     </div>
-                    <div class="stat-content">
-                        <h3 class="stat-title">Receiving</h3>
-                        <div class="stat-details">
-                            <div class="stat-row">
-                                <span class="stat-label">Receptions:</span>
-                                <span class="stat-value" data-stat="receptions" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Yards:</span>
-                                <span class="stat-value" data-stat="receiving_yards" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Touchdowns:</span>
-                                <span class="stat-value" data-stat="receiving_tds" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">YPC:</span>
-                                <span class="stat-value" data-stat="ypc" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Total TDs:</span>
-                                <span class="stat-value" data-stat="total_tds" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Total Points:</span>
-                                <span class="stat-value" data-stat="total_points" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Kick Returns:</span>
-                                <span class="stat-value" data-stat="kick_returns" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">KR Average:</span>
-                                <span class="stat-value" data-stat="kick_return_avg" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">KR Attempts:</span>
-                                <span class="stat-value" data-stat="kick_returns_count" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">All-Purpose:</span>
-                                <span class="stat-value" data-stat="all_purpose" data-target="0">0</span>
-                            </div>
-                        </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Receiving Yards:</span>
+                        <span class="stat-value" data-stat="receiving_yards" data-target="0">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Touchdowns:</span>
+                        <span class="stat-value" data-stat="receiving_tds" data-target="0">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">YPC:</span>
+                        <span class="stat-value" data-stat="ypc" data-target="0">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Total TDs:</span>
+                        <span class="stat-value" data-stat="total_tds" data-target="0">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Total Points:</span>
+                        <span class="stat-value" data-stat="total_points" data-target="0">0</span>
                     </div>
                 </div>
 
+                <!-- Special Teams Stats -->
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    <h3>Special Teams</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Kick Returns:</span>
+                        <span class="stat-value" data-stat="kick_returns" data-target="0">0</span>
                     </div>
-                    <div class="stat-content">
-                        <h3 class="stat-title">Defense</h3>
-                        <div class="stat-details">
-                            <div class="stat-row">
-                                <span class="stat-label">Total Tackles:</span>
-                                <span class="stat-value" data-stat="tackles" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Solo Tackles:</span>
-                                <span class="stat-value" data-stat="solo_tackles" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Assisted Tackles:</span>
-                                <span class="stat-value" data-stat="assisted_tackles" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Interceptions:</span>
-                                <span class="stat-value" data-stat="interceptions" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Pass Breakups:</span>
-                                <span class="stat-value" data-stat="pass_breakups" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Forced Fumbles:</span>
-                                <span class="stat-value" data-stat="forced_fumbles" data-target="0">0</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Int Return Yards:</span>
-                                <span class="stat-value" data-stat="interception_returns" data-target="0">0</span>
-                            </div>
-                        </div>
+                    <div class="stat-row">
+                        <span class="stat-label">KR Average:</span>
+                        <span class="stat-value" data-stat="kick_return_avg" data-target="0">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">KR Attempts:</span>
+                        <span class="stat-value" data-stat="kick_returns_count" data-target="0">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">All-Purpose:</span>
+                        <span class="stat-value" data-stat="all_purpose" data-target="0">0</span>
                     </div>
                 </div>
 
+                <!-- Defense Stats -->
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-trophy"></i>
+                    <h3>Defense</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Total Tackles:</span>
+                        <span class="stat-value" data-stat="tackles" data-target="0">0</span>
                     </div>
-                    <div class="stat-content">
-                        <h3 class="stat-title">Achievements</h3>
-                        <div class="stat-details">
-                            <div class="achievement">
-                                <i class="fas fa-medal"></i>
-                                <span>All-Conference WR</span>
-                            </div>
-                            <div class="achievement">
-                                <i class="fas fa-star"></i>
-                                <span>Team Captain</span>
-                            </div>
-                            <div class="achievement">
-                                <i class="fas fa-fire"></i>
-                                <span>1000+ All-Purpose Yards</span>
-                            </div>
-                        </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Solo Tackles:</span>
+                        <span class="stat-value" data-stat="solo_tackles" data-target="0">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Assisted Tackles:</span>
+                        <span class="stat-value" data-stat="assisted_tackles" data-target="0">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Interceptions:</span>
+                        <span class="stat-value" data-stat="interceptions" data-target="0">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Pass Breakups:</span>
+                        <span class="stat-value" data-stat="pass_breakups" data-target="0">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Forced Fumbles:</span>
+                        <span class="stat-value" data-stat="forced_fumbles" data-target="0">0</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Strength & Performance -->
-    <section class="strength-section">
-        <div class="container">
-            <h2 class="section-title">Strength & Performance</h2>
-            <div class="strength-grid">
-                <div class="strength-card">
-                    <div class="strength-icon">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <h3>Bench Press</h3>
-                    <p class="strength-value">245 lbs</p>
-                    <p class="strength-label">Upper Body Strength</p>
-                </div>
-                <div class="strength-card">
-                    <div class="strength-icon">
-                        <i class="fas fa-weight-hanging"></i>
-                    </div>
-                    <h3>Squat</h3>
-                    <p class="strength-value">405 lbs</p>
-                    <p class="strength-label">Lower Body Power</p>
-                </div>
-                <div class="strength-card">
-                    <div class="strength-icon">
-                        <i class="fas fa-running"></i>
-                    </div>
-                    <h3>40 Yard Dash</h3>
-                    <p class="strength-value">4.8s</p>
-                    <p class="strength-label">Speed & Agility</p>
-                </div>
-                <div class="strength-card">
-                    <div class="strength-icon">
-                        <i class="fas fa-arrow-up"></i>
-                    </div>
-                    <h3>Vertical Jump</h3>
-                    <p class="strength-value">30"</p>
-                    <p class="strength-label">Explosive Power</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Physical Attributes -->
-    <section class="physical-section">
-        <div class="container">
-            <h2 class="section-title">Physical Attributes</h2>
-            <div class="physical-grid">
-                <div class="physical-card">
-                    <div class="physical-icon">
-                        <i class="fas fa-ruler-vertical"></i>
-                    </div>
-                    <h3>Height</h3>
-                    <p class="physical-value">5'11"</p>
-                </div>
-                <div class="physical-card">
-                    <div class="physical-icon">
-                        <i class="fas fa-weight"></i>
-                    </div>
-                    <h3>Weight</h3>
-                    <p class="physical-value">185 lbs</p>
-                </div>
-                <div class="physical-card">
-                    <div class="physical-icon">
-                        <i class="fas fa-stopwatch"></i>
-                    </div>
-                    <h3>40 Yard Dash</h3>
-                    <p class="physical-value">4.8s</p>
-                </div>
-                <div class="physical-card">
-                    <div class="physical-icon">
-                        <i class="fas fa-running"></i>
-                    </div>
-                    <h3>Vertical Jump</h3>
-                    <p class="physical-value">30"</p>
-                </div>
-                <div class="physical-card">
-                    <div class="physical-icon">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <h3>Bench Press</h3>
-                    <p class="physical-value">245 lbs</p>
-                </div>
-                <div class="physical-card">
-                    <div class="physical-icon">
-                        <i class="fas fa-weight-hanging"></i>
-                    </div>
-                    <h3>Squat</h3>
-                    <p class="physical-value">405 lbs</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Harold "Jayden" Lepley. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="./script.js"></script>
     <script src="./sheets-integration.js"></script>
