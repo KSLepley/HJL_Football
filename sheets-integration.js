@@ -67,7 +67,11 @@ class StatsUpdater {
             receiving_yards: { value: '320', label: 'Receiving Yards', lastUpdated: '2024-09-12' },
             receiving_tds: { value: '5', label: 'Receiving TDs', lastUpdated: '2024-09-12' },
             ypc: { value: '21.3', label: 'YPC', lastUpdated: '2024-09-12' },
+            total_points: { value: '30', label: 'Total Points', lastUpdated: '2024-09-12' },
+            total_tds: { value: '5', label: 'Total TDs', lastUpdated: '2024-09-12' },
             kick_returns: { value: '52', label: 'Kick Return Yards', lastUpdated: '2024-09-12' },
+            kick_return_avg: { value: '26.0', label: 'Kick Return Avg', lastUpdated: '2024-09-12' },
+            kick_returns_count: { value: '2', label: 'Kick Returns', lastUpdated: '2024-09-12' },
             interception_returns: { value: '8', label: 'Interception Return Yards', lastUpdated: '2024-09-12' },
             all_purpose: { value: '380', label: 'All-Purpose Yards', lastUpdated: '2024-09-12' },
             tackles: { value: '10', label: 'Total Tackles', lastUpdated: '2024-09-12' },
@@ -88,9 +92,15 @@ class StatsUpdater {
         this.updateStat('receiving_yards', this.stats.receiving_yards?.value || '0');
         this.updateStat('receiving_tds', this.stats.receiving_tds?.value || '0');
         this.updateStat('ypc', this.stats.ypc?.value || '0');
+        
+        // Update scoring stats
+        this.updateStat('total_points', this.stats.total_points?.value || '0');
+        this.updateStat('total_tds', this.stats.total_tds?.value || '0');
 
         // Update special teams stats
         this.updateStat('kick_returns', this.stats.kick_returns?.value || '0');
+        this.updateStat('kick_return_avg', this.stats.kick_return_avg?.value || '0');
+        this.updateStat('kick_returns_count', this.stats.kick_returns_count?.value || '0');
         this.updateStat('interception_returns', this.stats.interception_returns?.value || '0');
         this.updateStat('all_purpose', this.stats.all_purpose?.value || '0');
 
