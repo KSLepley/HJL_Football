@@ -64,9 +64,12 @@ class StatsUpdater {
         // Harold's 2024-25 season stats (3 games: AVHS, South Hills, La Salle)
         this.stats = {
             receptions: { value: '15', label: 'Receptions', lastUpdated: '2024-09-12' },
-            receiving_yards: { value: '320', label: 'Yards', lastUpdated: '2024-09-12' },
-            receiving_tds: { value: '5', label: 'Touchdowns', lastUpdated: '2024-09-12' },
+            receiving_yards: { value: '320', label: 'Receiving Yards', lastUpdated: '2024-09-12' },
+            receiving_tds: { value: '5', label: 'Receiving TDs', lastUpdated: '2024-09-12' },
             ypc: { value: '21.3', label: 'YPC', lastUpdated: '2024-09-12' },
+            kick_returns: { value: '52', label: 'Kick Return Yards', lastUpdated: '2024-09-12' },
+            interception_returns: { value: '8', label: 'Interception Return Yards', lastUpdated: '2024-09-12' },
+            all_purpose: { value: '380', label: 'All-Purpose Yards', lastUpdated: '2024-09-12' },
             tackles: { value: '0', label: 'Tackles', lastUpdated: '2024-09-12' },
             interceptions: { value: '0', label: 'Interceptions', lastUpdated: '2024-09-12' },
             pass_breakups: { value: '0', label: 'Pass Breakups', lastUpdated: '2024-09-12' },
@@ -83,6 +86,11 @@ class StatsUpdater {
         this.updateStat('receiving_yards', this.stats.receiving_yards?.value || '0');
         this.updateStat('receiving_tds', this.stats.receiving_tds?.value || '0');
         this.updateStat('ypc', this.stats.ypc?.value || '0');
+
+        // Update special teams stats
+        this.updateStat('kick_returns', this.stats.kick_returns?.value || '0');
+        this.updateStat('interception_returns', this.stats.interception_returns?.value || '0');
+        this.updateStat('all_purpose', this.stats.all_purpose?.value || '0');
 
         // Update defensive stats
         this.updateStat('tackles', this.stats.tackles?.value || '0');
