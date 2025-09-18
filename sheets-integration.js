@@ -70,8 +70,10 @@ class StatsUpdater {
             kick_returns: { value: '52', label: 'Kick Return Yards', lastUpdated: '2024-09-12' },
             interception_returns: { value: '8', label: 'Interception Return Yards', lastUpdated: '2024-09-12' },
             all_purpose: { value: '380', label: 'All-Purpose Yards', lastUpdated: '2024-09-12' },
-            tackles: { value: '0', label: 'Tackles', lastUpdated: '2024-09-12' },
-            interceptions: { value: '0', label: 'Interceptions', lastUpdated: '2024-09-12' },
+            tackles: { value: '10', label: 'Total Tackles', lastUpdated: '2024-09-12' },
+            solo_tackles: { value: '7', label: 'Solo Tackles', lastUpdated: '2024-09-12' },
+            assisted_tackles: { value: '3', label: 'Assisted Tackles', lastUpdated: '2024-09-12' },
+            interceptions: { value: '1', label: 'Interceptions', lastUpdated: '2024-09-12' },
             pass_breakups: { value: '0', label: 'Pass Breakups', lastUpdated: '2024-09-12' },
             forced_fumbles: { value: '0', label: 'Forced Fumbles', lastUpdated: '2024-09-12' }
         };
@@ -94,6 +96,8 @@ class StatsUpdater {
 
         // Update defensive stats
         this.updateStat('tackles', this.stats.tackles?.value || '0');
+        this.updateStat('solo_tackles', this.stats.solo_tackles?.value || '0');
+        this.updateStat('assisted_tackles', this.stats.assisted_tackles?.value || '0');
         this.updateStat('interceptions', this.stats.interceptions?.value || '0');
         this.updateStat('pass_breakups', this.stats.pass_breakups?.value || '0');
         this.updateStat('forced_fumbles', this.stats.forced_fumbles?.value || '0');
