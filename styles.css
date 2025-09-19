@@ -1010,8 +1010,8 @@ body {
 
 .bio-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
     align-items: start;
 }
 
@@ -1062,12 +1062,13 @@ body {
 .bio-highlights {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .highlight-item {
     text-align: center;
-    padding: 30px 20px;
+    padding: 25px 15px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -1098,6 +1099,23 @@ body {
     font-size: 0.9rem;
     color: #666;
     margin: 0;
+}
+
+/* Desktop Optimization */
+@media (min-width: 1200px) {
+    .bio-content {
+        grid-template-columns: 2fr 1fr;
+        gap: 80px;
+    }
+    
+    .bio-text {
+        font-size: 1.2rem;
+        line-height: 1.9;
+    }
+    
+    .bio-video iframe {
+        height: 320px;
+    }
 }
 
 /* Responsive Design */
