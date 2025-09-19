@@ -999,7 +999,39 @@ body {
     background: #1a1a2e;
     color: #fff;
     text-align: center;
-    padding: 30px 0;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.creator-info {
+    background: rgba(65, 105, 225, 0.1);
+    border: 1px solid rgba(65, 105, 225, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+.creator-info p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.creator-info a {
+    color: #4169E1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.creator-info a:hover {
+    color: #C0C0C0;
+    text-decoration: underline;
 }
 
 /* Bio Section */
