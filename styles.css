@@ -1048,10 +1048,13 @@ body {
 .bio-video {
     width: 100%;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .bio-video iframe {
     transition: all 0.3s ease;
+    max-width: 100%;
 }
 
 .bio-video iframe:hover {
@@ -1219,6 +1222,7 @@ body {
     }
 
     .bio-video iframe {
+        width: 100%;
         height: 250px;
     }
 
