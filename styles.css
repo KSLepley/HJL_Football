@@ -1045,6 +1045,20 @@ body {
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
 }
 
+.bio-video {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.bio-video iframe {
+    transition: all 0.3s ease;
+}
+
+.bio-video iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
 .bio-highlights {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1184,6 +1198,10 @@ body {
 
     .action-photo {
         max-width: 100%;
+    }
+
+    .bio-video iframe {
+        height: 250px;
     }
 
     .bio-highlights {
