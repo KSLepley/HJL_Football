@@ -61,19 +61,19 @@ class StatsUpdater {
 
     // Fallback stats if Google Sheets is unavailable
     loadFallbackStats() {
-        // Harold's 2024-25 season stats (3 games: AVHS, South Hills, La Salle)
+        // Harold's 2025-26 season stats (4 games: AVHS, South Hills, La Salle, Bosco Tech)
         this.stats = {
-            receptions: { value: '15', label: 'Receptions', lastUpdated: '2024-09-12' },
-            receiving_yards: { value: '320', label: 'Receiving Yards', lastUpdated: '2024-09-12' },
-            receiving_tds: { value: '5', label: 'Receiving TDs', lastUpdated: '2024-09-12' },
-            ypc: { value: '21.3', label: 'YPC', lastUpdated: '2024-09-12' },
+            receptions: { value: '17', label: 'Receptions', lastUpdated: '2024-09-19' },
+            receiving_yards: { value: '370', label: 'Receiving Yards', lastUpdated: '2024-09-19' },
+            receiving_tds: { value: '7', label: 'Receiving TDs', lastUpdated: '2024-09-19' },
+            ypc: { value: '21.8', label: 'YPC', lastUpdated: '2024-09-19' },
             total_points: { value: '30', label: 'Total Points', lastUpdated: '2024-09-12' },
-            total_tds: { value: '5', label: 'Total TDs', lastUpdated: '2024-09-12' },
+            total_tds: { value: '7', label: 'Total TDs', lastUpdated: '2024-09-19' },
             kick_returns: { value: '52', label: 'Kick Return Yards', lastUpdated: '2024-09-12' },
             kick_return_avg: { value: '26.0', label: 'Kick Return Avg', lastUpdated: '2024-09-12' },
             kick_returns_count: { value: '2', label: 'Kick Returns', lastUpdated: '2024-09-12' },
             interception_returns: { value: '8', label: 'Interception Return Yards', lastUpdated: '2024-09-12' },
-            all_purpose: { value: '380', label: 'All-Purpose Yards', lastUpdated: '2024-09-12' },
+            all_purpose: { value: '430', label: 'All-Purpose Yards', lastUpdated: '2024-09-19' },
             tackles: { value: '10', label: 'Total Tackles', lastUpdated: '2024-09-12' },
             solo_tackles: { value: '7', label: 'Solo Tackles', lastUpdated: '2024-09-12' },
             assisted_tackles: { value: '3', label: 'Assisted Tackles', lastUpdated: '2024-09-12' },
