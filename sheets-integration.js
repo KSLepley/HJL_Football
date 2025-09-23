@@ -74,9 +74,9 @@ class StatsUpdater {
             kick_returns_count: { value: '2', label: 'Kick Returns', lastUpdated: '2024-09-12' },
             interception_returns: { value: '8', label: 'Interception Return Yards', lastUpdated: '2024-09-12' },
             all_purpose: { value: '430', label: 'All-Purpose Yards', lastUpdated: '2024-09-19' },
-            tackles: { value: '10', label: 'Total Tackles', lastUpdated: '2024-09-12' },
-            solo_tackles: { value: '7', label: 'Solo Tackles', lastUpdated: '2024-09-12' },
-            assisted_tackles: { value: '3', label: 'Assisted Tackles', lastUpdated: '2024-09-12' },
+            tackles: { value: '15', label: 'Total Tackles', lastUpdated: '2024-09-19' },
+            solo_tackles: { value: '9', label: 'Solo Tackles', lastUpdated: '2024-09-19' },
+            assisted_tackles: { value: '6', label: 'Assisted Tackles', lastUpdated: '2024-09-19' },
             interceptions: { value: '1', label: 'Interceptions', lastUpdated: '2024-09-12' },
             pass_breakups: { value: '0', label: 'Pass Breakups', lastUpdated: '2024-09-12' },
             forced_fumbles: { value: '0', label: 'Forced Fumbles', lastUpdated: '2024-09-12' }
