@@ -35,9 +35,9 @@ A modern, professional recruiting website showcasing Harold "Jayden" Lepley's fo
 - **Class**: 2027
 - **Position**: Wide Receiver / Safety
 - **Jersey**: #4
-- **Height**: 5'11"
+- **Height**: 6'0"
 - **Weight**: 185 lbs
-- **40 Time**: 4.8s
+- **40 Time**: 4.6s
 - **Vertical Jump**: 30"
 
 ## 📈 Current Season Stats
@@ -51,7 +51,7 @@ A modern, professional recruiting website showcasing Harold "Jayden" Lepley's fo
 ### **Physical Performance**
 - **Bench Press**: 245 lbs
 - **Squat**: 405 lbs
-- **40 Yard Dash**: 4.8s
+- **40 Yard Dash**: 4.6s
 - **Vertical Jump**: 30"
 
 ## 🎥 Video Highlights
