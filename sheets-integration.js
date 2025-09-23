@@ -67,7 +67,7 @@ class StatsUpdater {
             receiving_yards: { value: '370', label: 'Receiving Yards', lastUpdated: '2024-09-19' },
             receiving_tds: { value: '7', label: 'Receiving TDs', lastUpdated: '2024-09-19' },
             ypc: { value: '21.8', label: 'YPC', lastUpdated: '2024-09-19' },
-            total_points: { value: '30', label: 'Total Points', lastUpdated: '2024-09-12' },
+            total_points: { value: '42', label: 'Total Points', lastUpdated: '2024-09-19' },
             total_tds: { value: '7', label: 'Total TDs', lastUpdated: '2024-09-19' },
             kick_returns: { value: '52', label: 'Kick Return Yards', lastUpdated: '2024-09-12' },
             kick_return_avg: { value: '26.0', label: 'Kick Return Avg', lastUpdated: '2024-09-12' },
